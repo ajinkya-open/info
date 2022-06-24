@@ -35,7 +35,7 @@ client = mqtt.Client()
 #client.on_connect = on_connect
 #client.on_message = on_message
 client.will_set("device1/status", payload="Offline", qos=0, retain=True)
-client.connect("broker.pongohome.in", 1883, 60)
+client.connect("broker", 1883, 60)
 
 # Blocking call that processes network traffic, dispatches callbacks and
 # handles reconnecting.
